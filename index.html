@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eLearning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">eLearning</div>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learn Anywhere, Anytime</h1>
+            <p>Join thousands of students improving their skills.</p>
+            <button onclick="enroll()">Start Learning</button>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <h2>Featured Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Learn to build dynamic websites with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Explore data analysis and visualization with Python.</p>
+            </div>
+            <div class="course-card">
+                <h3>Machine Learning</h3>
+                <p>Understand the basics of AI and build your own models.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing quality online education with a focus on practical skills. Our mission is to empower learners to succeed in the digital world.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 eLearning Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function enroll() {
+            alert("Thank you for your interest! We will contact you soon.");
+        }
+    </script>
+</body>
+</html>
