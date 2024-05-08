@@ -2,73 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>eLearning Platform</title>
+    <title>E-Learning Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">eLearning</div>
-            <ul>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">E-Learn</div>
+        <ul class="nav-links">
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to E-Learn</h1>
+            <p>Unlock your potential with our interactive courses.</p>
+            <button onclick="scrollToCourses()">Explore Courses</button>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Learn Anywhere, Anytime</h1>
-            <p>Join thousands of students improving their skills.</p>
-            <button onclick="enroll()">Start Learning</button>
-        </div>
-    </section>
-
-    <section id="courses" class="courses">
-        <h2>Featured Courses</h2>
-        <div class="course-grid">
+    <!-- Course Highlights -->
+    <section id="courses" class="course-highlights">
+        <h2>Popular Courses</h2>
+        <div class="course-container">
             <div class="course-card">
-                <h3>Web Development</h3>
-                <p>Learn to build dynamic websites with HTML, CSS, and JavaScript.</p>
+                <img src="./datascience.jpg" alt="Course 1">
+                <h3>Data Science 101</h3>
+                <p>Learn the basics of data science and analytics.</p>
             </div>
             <div class="course-card">
-                <h3>Data Science</h3>
-                <p>Explore data analysis and visualization with Python.</p>
+                <img src="./wb.webp" alt="Course 2">
+                <h3>Web Development Basics</h3>
+                <p>Get started with HTML, CSS, and JavaScript.</p>
             </div>
             <div class="course-card">
-                <h3>Machine Learning</h3>
-                <p>Understand the basics of AI and build your own models.</p>
+                <img src="./ml.jpg" alt="Course 3">
+                <h3>Machine Learning with Python</h3>
+                <p>Understand the fundamentals of machine learning.</p>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>We are dedicated to providing quality online education with a focus on practical skills. Our mission is to empower learners to succeed in the digital world.</p>
+        <p>At E-Learn, we are committed to providing high-quality online courses to help you expand your knowledge and skills. Whether you're looking to advance your career or learn something new, we've got you covered.</p>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"The courses are amazing! The instructors are very knowledgeable and supportive."</p>
+                <span>- Jane Doe</span>
+            </div>
+            <div class="testimonial">
+                <p>"I was able to learn at my own pace, and the content was easy to follow."</p>
+                <span>- John Smith</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us.</p>
+        <p>If you have any questions or would like more information about our courses, please reach out to us.</p>
         <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message"></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
 
-    <footer>
-        <p>© 2024 eLearning Platform. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 E-Learn. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript for Smooth Scrolling -->
     <script>
-        function enroll() {
-            alert("Thank you for your interest! We will contact you soon.");
+        function scrollToCourses() {
+            const coursesSection = document.getElementById("courses");
+            coursesSection.scrollIntoView({ behavior: "smooth" });
         }
     </script>
 </body>
