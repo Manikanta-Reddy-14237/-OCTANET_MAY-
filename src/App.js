@@ -44,6 +44,7 @@ export default function App() {
 
   return (
     <>
+    <h1>To Do List</h1>
       <Detail onSubmit={handle} />
       {data.map((task, index) => (
         <li key={index}>
